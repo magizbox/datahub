@@ -1,0 +1,10 @@
+version: '2'
+services:
+   neo4j:
+      build: ./neo4j/.
+      ports: 
+         - 7474:7474
+      volumes:
+         - ./data/neo4j:/data
+      environment:
+         - NEO4J_AUTH=neo4j/root
